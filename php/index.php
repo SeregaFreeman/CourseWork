@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-setlocale(LC_ALL, 'ru_RU.65001', 'rus_RUS.65001', 'Russian_Russia. 65001', 'russian');
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,10 +11,9 @@ setlocale(LC_ALL, 'ru_RU.65001', 'rus_RUS.65001', 'Russian_Russia. 65001', 'russ
     <title>Chat</title>
     
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
-    
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js" charset="utf-8"></script>
     <script type="text/javascript" src="../js/chat.js" charset="utf-8"></script>
-    <script type="text/javascript" charset="utf-8">
+    <script type="text/javascript" charset="utf-8"> <!-->вынести отдельно<-->
     
 		var name='';
         // вводим никнейм
@@ -81,13 +79,13 @@ setlocale(LC_ALL, 'ru_RU.65001', 'rus_RUS.65001', 'Russian_Russia. 65001', 'russ
 
 </head>
 
-<body class="first" onload="setInterval('chat.update()', 1000)">
+<body class="first" onload="chat.update()">
 
     <div id="page-wrap">
     
         <h2>Welcome to jQuery/PHP Chat</h2>
         <input type="button" id="style" value="Изменить стиль">
-		<script type="text/javascript" charset="utf-8">
+		<script type="text/javascript" charset="utf-8"> <!-->вынести отдельно<-->
 		$(document).ready(function(){
 			$('#style').click(function(){
 				

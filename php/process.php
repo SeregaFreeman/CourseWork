@@ -1,8 +1,6 @@
 <?php
 
 header('Content-Type: text/html; charset=utf-8');
-setlocale(LC_ALL, 'ru_RU.65001', 'rus_RUS.65001', 'Russian_Russia. 65001', 'russian');
-
 
     $function = $_POST['function'];
     
@@ -42,17 +40,16 @@ setlocale(LC_ALL, 'ru_RU.65001', 'rus_RUS.65001', 'Russian_Russia. 65001', 'russ
         	break;
     	 
     	 case('send'):
-		  $nickname = htmlentities(strip_tags($_POST['nickname']));
+		  $nickname = htmlentities(strip_tags($_POST['nickname']), ENT_QUOTES , "UTF-8"); // добавил два параметра сюда, главный из которых - третий: он выставляет кодировку, если этого не сделать, то пхп решает, что основная - windows-1251, что и генерит крякозябры) 
 			 $reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
-			  $message = htmlentities(strip_tags($_POST['message']));
+			  $message = htmlentities(strip_tags($_POST['message']), ENT_QUOTES , "UTF-8"); // заменил htmlspecialhars на htmlentities с такими же двумя параметрами. 
 		 if(($message) != "\n"){
         	
 			 if(preg_match($reg_exUrl, $message, $url)) {
        			$message = preg_replace($reg_exUrl, '<a href="'.$url[0].'" target="_blank">'.$url[0].'</a>', $message);
 				} 
 			 
-        	
-        	 fwrite(fopen('chat.txt', 'a'), "<span>". $nickname . "</span>" . $message = str_replace("\n", " ", $message) . "\n"); 
+        	 fwrite(fopen('chat.txt', 'a'), "<span>". $nickname . "</span>" . $message . "\n"); 
 		 }
         	 break;
     	
