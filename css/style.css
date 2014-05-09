@@ -1,0 +1,91 @@
+﻿*{ 
+margin: 0; 
+padding: 0; 
+}
+
+body.first{ 
+font: 12px "Lucida Grande", Sans-Serif; 
+background: url(../images/bg.png); 
+}
+body.second{
+font: 12px "Lucida Grande", Sans-Serif; 
+background: url(../images/backgr.png);
+}
+
+h2{ 
+color: #fa9f00; 
+font: 30px Helvetica, Sans-Serif; 
+margin: 0 0 10px 0; 
+}
+
+#page-wrap{ 
+width: 600px; 
+margin: 30px auto; 
+position: relative; 
+}
+
+#chat-wrap.first{
+border: 1px solid #eee; 
+margin: 0 0 15px 0; 
+}
+#chat-wrap.second{ 
+border: 2px dotted #bbb; 
+margin: 0 0 15px 0; 
+}
+
+#chat-area{ 
+height: 300px;
+border: 1px solid #666;  
+background: white;
+overflow-y: scroll;
+}
+
+#chat-area span{ 
+white-space: pre-wrap;
+color: white; 
+background: #333; 
+padding: 2px 8px;  
+margin: 0 5px 0 0; 
+}
+
+#chat-area p{ 
+padding: 8px 0; 
+border-bottom: 1px solid white; 
+}
+
+#name-area.first{ 
+color: white; 
+font: bold 12px "Lucida Grande", Sans-Serif; 
+}
+
+#name-area.second{ 
+color: black; 
+font: bold 12px "Lucida Grande", Sans-Serif; 
+}
+   
+#name-area span{ 
+color: #fa9f00; 
+}
+
+#send-message-area p.first{ 
+float: left; 
+color: white; 
+padding-top: 27px; 
+font-size: 14px; 
+}
+#send-message-area p.second{ 
+float: left; 
+color: black; 
+padding-top: 27px; 
+font-size: 14px; 
+}
+
+
+#sendie{ 
+border: 3px solid #999; 
+width: 400px;
+height: 150px;
+padding: 10px; 
+font: 12px "Lucida Grande", Sans-Serif; 
+float: right; 
+}
