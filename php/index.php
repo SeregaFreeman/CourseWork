@@ -13,69 +13,7 @@ header('Content-Type: text/html; charset=utf-8');
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js" charset="utf-8"></script>
     <script type="text/javascript" src="../js/chat.js" charset="utf-8"></script>
-    <script type="text/javascript" charset="utf-8"> <!-->вынести отдельно<-->
-    
-		var name='';
-        // вводим никнейм
-		function getNickname() {
-			name = document.getElementById('username').value;
-			//задаем имя по умолчанию
-			if (!name || name === '')
-				name = "Guest" + Math.floor(Math.random() * (1000)) + 1;
-			// убираем запрещенные символы
-			name = name.replace(/(<([^>]+)>)/ig,"");
-			$("#name-area").html("You are: <span>" + name + "</span>");
-			var hide = document.getElementById('nicknameForm');
-			hide.style.display = 'none';
-		}    	
-    	
-    	// стартуем чат
-        var chat =  new Chat();
-    	$(function() {
-    		 chat.getState();
-		
-			// наблюдаем за полем ввода             
-			$("#sendie").keydown(function(event) {  
-                
-				var key = event.which;  
-                //все клавиши 
-                
-				if (key >= 33) {
-                    
-					var maxLength = $(this).attr("maxlength");  
-                    var length = this.value.length;  
-                     
-                     // не разрешаем, если длина > максимальной
-                     if (length >= maxLength) {  
-                         event.preventDefault();  
-                     }  
-                  }  
-    		 																																																});
-    		 // watch textarea for release of key press
-    		 $('#sendie').keyup(function(e) {	
-    		 					 
-    			  if (e.keyCode == 13) { 
-    			  
-                    var text = $(this).val();
-    				var maxLength = $(this).attr("maxlength");  
-                    var length = text.length; 
-                     
-                    // посылаем
-                    if (length <= maxLength + 1) { 
-                     
-    			        chat.send(text, name);	
-    			        $(this).val("");
-    			        
-                    } 
-					else {
-                    
-    					$(this).val(text.substring(0, maxLength));
-    					
-    				}	
-    		    }
-            });
-        });
-    </script>
+    <script type="text/javascript" src="../js/start.js" charset="utf-8"></script>
 
 </head>
 
@@ -85,56 +23,7 @@ header('Content-Type: text/html; charset=utf-8');
     
         <h2>Welcome to jQuery/PHP Chat</h2>
         <input type="button" id="style" value="Изменить стиль">
-		<script type="text/javascript" charset="utf-8"> <!-->вынести отдельно<-->
-		$(document).ready(function(){
-			$('#style').click(function(){
-				
-				$('body').each(function(){
-					if ($(this).hasClass('first'))
-						{
-							$('body').removeClass('first').addClass('second');
-						}
-					else
-						{
-							$('body').removeClass('second').addClass('first');
-						}					
-				});				
-				
-				$('#chat-wrap').each(function(){
-					if ($(this).hasClass('first'))
-						{
-							$('#chat-wrap').removeClass('first').addClass('second');
-						}
-					else
-						{
-							$('#chat-wrap').removeClass('second').addClass('first');
-						}					
-				});
-				
-				$('#send-message-area p').each(function(){
-					if ($(this).hasClass('first'))
-						{
-							$('#send-message-area p').removeClass('first').addClass('second');
-						}
-					else
-						{
-							$('#send-message-area p').removeClass('second').addClass('first');
-						}					
-				});
-				
-				$('#name-area').each(function(){
-					if ($(this).hasClass('first'))
-						{
-							$('#name-area').removeClass('first').addClass('second');
-						}
-					else
-						{
-							$('#name-area').removeClass('second').addClass('first');
-						}					
-				});
-			});
-		});
-		</script>
+		<script type="text/javascript" src="../js/styleChange.js" charset="utf-8"></script>
 		
 		<span id="name-area" class="first"></span>
 		
