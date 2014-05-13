@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#style').click(function(){
+	$('#changeStyleButton').click(function(){
 		
 		$('body').each(function(){
 			if ($(this).hasClass('first')){
@@ -10,30 +10,21 @@ $(document).ready(function(){
 			}					
 		});				
 				
-		$('#chat-wrap').each(function(){
+		$('#sendMessageArea p').each(function(){
 			if ($(this).hasClass('first')){
-				$('#chat-wrap').removeClass('first').addClass('second');
+				$('#sendMessageArea p').removeClass('first').addClass('second');
 			}
 			else{
-				$('#chat-wrap').removeClass('second').addClass('first');
+				$('#sendMessageArea p').removeClass('second').addClass('first');
 			}					
 		});
 				
-		$('#send-message-area p').each(function(){
+		$('#nameArea').each(function(){
 			if ($(this).hasClass('first')){
-				$('#send-message-area p').removeClass('first').addClass('second');
+				$('#nameArea').removeClass('first').addClass('second');
 			}
 			else{
-				$('#send-message-area p').removeClass('second').addClass('first');
-			}					
-		});
-				
-		$('#name-area').each(function(){
-			if ($(this).hasClass('first')){
-				$('#name-area').removeClass('first').addClass('second');
-			}
-			else{
-				$('#name-area').removeClass('second').addClass('first');
+				$('#nameArea').removeClass('second').addClass('first');
 			}					
 		});
 	});

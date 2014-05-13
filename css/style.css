@@ -1,91 +1,144 @@
 ﻿*{ 
-margin: 0; 
-padding: 0; 
+	margin: 0; 
+	padding: 0; 
 }
 
 body.first{ 
-font: 12px "Lucida Grande", Sans-Serif; 
-background: url(../images/bg.png); 
+	font: 12px "Lucida Grande", Sans-Serif; 
+	background: url(../images/bg.png); 
 }
 body.second{
-font: 12px "Lucida Grande", Sans-Serif; 
-background: url(../images/backgr.png);
+	font: 12px "Lucida Grande", Sans-Serif; 
+	background: url(../images/backgr.png);
 }
 
 h2{ 
-color: #fa9f00; 
-font: 30px Helvetica, Sans-Serif; 
-margin: 0 0 10px 0; 
+	color: #fa9f00; 
+	font: 30px Helvetica, Sans-Serif; 
+	margin: 0 0 10px 0; 
 }
 
-#page-wrap{ 
-width: 600px; 
-margin: 30px auto; 
-position: relative; 
+#pageWrap{ 
+	width: 600px; 
+	margin: 15px auto; 
+	position: relative;
 }
 
-#chat-wrap.first{
-border: 1px solid #eee; 
-margin: 0 0 15px 0; 
-}
-#chat-wrap.second{ 
-border: 2px dotted #bbb; 
-margin: 0 0 15px 0; 
+#chatWrap{
+	margin-top: 5px;
 }
 
-#chat-area{ 
-height: 300px;
-border: 1px solid #666;  
-background: white;
-overflow-y: scroll;
+#chatReadArea{ 
+	height: 300px;
+	width: 596px;
+	background: white;
+	border: 2px solid grey;
+	overflow-y: scroll;
+	word-wrap: break-word;
+}
+#chatReadArea span{
+	color: white; 
+	background: #333; 
+	padding: 2px 8px;  
+	margin: 0 5px 0 0;	
+}
+#chatReadArea p{ 
+	padding: 8px 0; 
+	border-bottom: 1px solid white; 
 }
 
-#chat-area span{ 
-white-space: pre-wrap;
-color: white; 
-background: #333; 
-padding: 2px 8px;  
-margin: 0 5px 0 0; 
+#chatWriteArea{
+	height: 175px;
+	display: block;
+	margin: 5px 0 0 0;
 }
 
-#chat-area p{ 
-padding: 8px 0; 
-border-bottom: 1px solid white; 
+#nameArea.first{ 
+	display: inline;
+	color: white; 
+	font: bold 16px "Lucida Grande", Sans-Serif; 
+}
+#nameArea.second{ 
+	display: inline;
+	color: black; 
+	font: bold 16px "Lucida Grande", Sans-Serif; 
+}   
+#nameArea span{
+	color: #fa9f00;
 }
 
-#name-area.first{ 
-color: white; 
-font: bold 12px "Lucida Grande", Sans-Serif; 
+#sendMessageArea p.first{ 
+	float: left; 
+	color: white; 
+	padding-top: 27px; 
+	font-size: 14px; 
 }
-
-#name-area.second{ 
-color: black; 
-font: bold 12px "Lucida Grande", Sans-Serif; 
+#sendMessageArea p.second{ 
+	float: left; 
+	color: black; 
+	padding-top: 27px; 
+	font-size: 14px; 
 }
-   
-#name-area span{ 
-color: #fa9f00; 
-}
-
-#send-message-area p.first{ 
-float: left; 
-color: white; 
-padding-top: 27px; 
-font-size: 14px; 
-}
-#send-message-area p.second{ 
-float: left; 
-color: black; 
-padding-top: 27px; 
-font-size: 14px; 
-}
-
 
 #sendie{ 
-border: 3px solid #999; 
-width: 400px;
-height: 150px;
-padding: 10px; 
-font: 12px "Lucida Grande", Sans-Serif; 
-float: right; 
+	border: 3px solid #999; 
+	width: 400px;
+	height: 150px;
+	padding: 10px; 
+	font: 12px "Lucida Grande", Sans-Serif; 
+	float: right; 
+}
+
+footer{
+	display: block;
+	width: 600px;
+	height: 30px;
+	margin: 0 auto;
+	position: relative;
+}
+
+nav{
+	margin: 0 auto;
+	width: 300px;
+}
+
+button.first{
+	height: 24px;
+	background-color: transparent;
+	color: grey;
+	border: none;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: white;	
+	border-radius: 2px;
+}
+
+ul.footer{
+	display: inline-block;	
+	list-style: none;
+}
+
+li{
+	margin: 2px 15px;
+	display: inline-block;
+}
+
+form{
+	display: inline;
+}
+#changeStyleForm{
+	float: right;
+}
+
+.input{
+	height: 22px;
+	font-size: 12px;
+}
+#top{
+	width: 600px;
+	height: 24px;
+	margin: 0 auto;
 }

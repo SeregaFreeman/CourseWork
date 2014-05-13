@@ -1,11 +1,11 @@
 var name='';
 // вводим никнейм
 function getNickname() {
-	name = document.getElementById('username').value;
+	name = document.getElementById('nicknameInput').value;
 	if (!name || name === '') //задаем имя по умолчанию
 		name = "Guest" + Math.floor(Math.random() * (1000)) + 1;
 	name = name.replace(/(<([^>]+)>)/ig,""); // убираем запрещенные символы
-	$("#name-area").html("You are: <span>" + name + "</span>");
+	$("#nameArea").html("You are: <span>" + name + "</span>");
 	var hide = document.getElementById('nicknameForm');
 	hide.style.display = 'none';
 }    	

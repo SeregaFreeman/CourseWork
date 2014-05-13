@@ -46,10 +46,10 @@ function updateChat(){
 			success: function(data){
 				if(data.text){
 					for (var i = 0; i < data.text.length; i++) {
-                        $('#chat-area').append($("<p>"+ data.text[i] +"</p>"));
+                        $('#chatReadArea').append($("<p>"+ data.text[i] +"</p>"));
                     }								  
 				}
-				document.getElementById('chat-area').scrollTop = document.getElementById('chat-area').scrollHeight;
+				document.getElementById('chatReadArea').scrollTop = document.getElementById('chatReadArea').scrollHeight;
 				instanse = false;
 				state = data.state;
 			   },
