@@ -1,6 +1,5 @@
 var instanse = false;
 var state;
-var mes;
 var file;
 
 function Chat () {
@@ -13,14 +12,14 @@ function Chat () {
 function getStateOfChat(){
 	if(!instanse){
 		instanse = true;
-		$.ajax({
+		$.ajax({							//множество пар ключ/значение, которые генерируют запрос ajax
 			type: "POST",
 			url: "process.php",
 			data: {  
 				'function': 'getState',
 				'file': file
 			},
-			dataType: "json",
+			dataType: "json",				//текстовый формат обмена данными, основанный на JavaScript
 			
 			success: function(data){
 				state = data.state;

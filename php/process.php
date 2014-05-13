@@ -2,7 +2,7 @@
 
 header('Content-Type: text/html; charset=utf-8');
 
-    $function = $_POST['function'];
+    $function = $_POST['function'];  //Ассоциативный массив данных, переданных скрипту через HTTP метод POST.
     
     $log = array();
     
@@ -53,6 +53,6 @@ header('Content-Type: text/html; charset=utf-8');
     	
     }
     
-    echo json_encode($log);
+    echo json_encode($log); //Возвращает JSON-представление данных
 
 ?>

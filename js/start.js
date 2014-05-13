@@ -25,7 +25,7 @@ $(function() {
             var length = this.value.length;  
             // не разрешаем, если длина > максимальной
             if (length >= maxLength) {  
-                event.preventDefault();  
+                event.preventDefault();  //позволяет предотвратить выполнение стандартного действия
             }  
         }  
     });
