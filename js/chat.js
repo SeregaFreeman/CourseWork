@@ -48,14 +48,11 @@ function updateChat(){
                         $('#chatReadArea').append($("<p>"+ data.text[i] +"</p>"));
                     }								  
 				}
-				document.getElementById('chatReadArea').scrollTop = document.getElementById('chatReadArea').scrollHeight;
+				$("#chatReadArea").scrollTop = $("#chatReadArea").scrollHeight;
 				instanse = false;
 				state = data.state;
 			   },
 		});
-	}
-	else {
-		setTimeout(updateChat, 1500); /*это можно и убрать*/
 	}
 }
 

@@ -1,14 +1,12 @@
-var name='';
 // вводим никнейм
 function getNickname() {
-	name = document.getElementById('nicknameInput').value;
-	if (!name || name === '') //задаем имя по умолчанию
+	var name = $("#nicknameInput").val();
+	if (!name || name == '') //задаем имя по умолчанию
 		name = "Guest" + Math.floor(Math.random() * (1000)) + 1;
 	name = name.replace(/(<([^>]+)>)/ig,""); // убираем запрещенные символы
 	$("#nameArea").html("You are: <span>" + name + "</span>");
-	var hide = document.getElementById('nicknameForm');
-	hide.style.display = 'none';
-}    	
+	$("#nicknameForm").css("display", "none");
+}
 
 // стартуем чат
 var chat =  new Chat();
@@ -30,7 +28,7 @@ $(function() {
         }  
     });
     
-	// наблюдаем за нажатиями
+	// наблюдаем за нажатием enter
     $('#sendie').keyup(function(e) {	
 		
 		if (e.keyCode == 13) { 
